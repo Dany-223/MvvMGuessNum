@@ -13,6 +13,7 @@ namespace MvvMGuessNum.ViewModels
         {
             GuessCommand = new RelayCommand(GuessNum);
             NewGameCommand = new RelayCommand(NewGame);
+            NewGame(null);
         }
 
         public ICommand GuessCommand {  get;  }
@@ -73,11 +74,12 @@ namespace MvvMGuessNum.ViewModels
             IsEnable = true;
             Popitka = 5;
             Message = "";
+            GenerateNum();
         }
 
         private void GuessNum(object parametr)
         {
-            GenerateNum();
+             
             if (RandomNum < int.Parse(Enter))
             {
                 Message = $"<{int.Parse(Enter)}";
