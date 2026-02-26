@@ -80,22 +80,22 @@ namespace MvvMGuessNum.ViewModels
             GenerateNum();
             if (RandomNum < int.Parse(Enter))
             {
-                Message = $"{RandomNum} < {int.Parse(Enter)}";
+                Message = $"<{int.Parse(Enter)}";
                 Popitka -= 1;
             }
             if (RandomNum > int.Parse(Enter))
             {
-                Message = $"{RandomNum} > {int.Parse(Enter)}";
+                Message = $">{int.Parse(Enter)}";
                 Popitka -= 1;
             }
             if (RandomNum == int.Parse(Enter))
             {
-                Message = $"Вы угадали число - {RandomNum}";
+                Message = $"={RandomNum}";
                 IsEnable = false;
             }
             if (Popitka == 0)
             {
-                Message = $"Попыток не осталось";
+                Message = "0 пт";
                 IsEnable = false;
             }
         }
