@@ -15,8 +15,8 @@ namespace MvvMGuessNum.ViewModels
             NewGameCommand = new RelayCommand(NewGame);
         }
 
-        ICommand GuessCommand {  get; set; }
-        ICommand NewGameCommand {  get; set; }
+        public ICommand GuessCommand {  get;  }
+        public ICommand NewGameCommand {  get; }
         
         public bool IsEnable
         {
