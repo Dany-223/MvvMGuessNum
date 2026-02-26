@@ -20,7 +20,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4 0 0 0">
+        <TextBlock FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4 0 0 0" Grid.ColumnSpan="2">
             <Run Text="Попытки: "/>
             <Run Text="{Binding Popitka}"/>
         </TextBlock>
