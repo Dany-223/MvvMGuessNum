@@ -22,19 +22,19 @@
         </Grid.RowDefinitions>
         <TextBlock FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4 0 0 0">
             <Run Text="Попытки: "/>
-            <Run Text="5"/>
+            <Run Text="{Binding Popitka}"/>
         </TextBlock>
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <Label Content="Загаданное число" HorizontalAlignment="Center" FontSize="16" Margin="0 0 0 5" Padding="0"/>
             <Border BorderThickness="3" BorderBrush="Black" Height="130">
-                <TextBlock Text="?" FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Message}" FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>
         </StackPanel>
         <Button Background="Green" Command="{Binding NewGameCommand}" Content="Новая игра" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="15" Margin="0 6 6 0"/>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="3">
             <Label Content="Введите число:" FontSize="35" HorizontalAlignment="Center"/>
-            <TextBox Width="300" FontSize="35" TextAlignment="Center" BorderThickness="3"/>
-            <Button Content="Попытаться" Margin="0 10 0 0" Width="150" FontSize="25" Height="50" Background="Azure"/>
+            <TextBox Width="300" Text="{Binding Enter}" FontSize="35" TextAlignment="Center" BorderThickness="3"/>
+            <Button Content="Попытаться" IsEnabled="{Binding IsEnable}" Command="{Binding GuessCommand}" Margin="0 10 0 0" Width="150" FontSize="25" Height="50" Background="Azure"/>
         </StackPanel>
     </Grid>
 </Window>
