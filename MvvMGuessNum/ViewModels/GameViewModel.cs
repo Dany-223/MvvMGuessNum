@@ -11,7 +11,7 @@ namespace MvvMGuessNum.ViewModels
     {
         public GameViewModel()
         {
-            GuessCommand = new RelayCommand(GuessNum, CanGuess);
+            GuessCommand = new RelayCommand(GuessNum);
             NewGameCommand = new RelayCommand(NewGame);
         }
 
