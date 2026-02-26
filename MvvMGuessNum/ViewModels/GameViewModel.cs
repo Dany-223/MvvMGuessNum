@@ -83,12 +83,12 @@ namespace MvvMGuessNum.ViewModels
                 Message = $"<{int.Parse(Enter)}";
                 Popitka -= 1;
             }
-            if (RandomNum > int.Parse(Enter))
+            else if (RandomNum > int.Parse(Enter))
             {
                 Message = $">{int.Parse(Enter)}";
                 Popitka -= 1;
             }
-            if (RandomNum == int.Parse(Enter))
+            else if (RandomNum == int.Parse(Enter))
             {
                 Message = $"={RandomNum}";
                 IsEnable = false;
