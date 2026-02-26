@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MvvMGuessNum"
+        xmlns:viewmodel="clr-namespace:MvvMGuessNum.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="400">
+    <Window.DataContext>
+        <viewmodel:GameViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,10 +27,10 @@
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <Label Content="Загаданное число" HorizontalAlignment="Center" FontSize="16" Margin="0 0 0 5" Padding="0"/>
             <Border BorderThickness="3" BorderBrush="Black" Height="130">
-                <TextBlock Text=">100" FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="?" FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>
         </StackPanel>
-        <Button Background="Green" Content="Новая игра" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="15" Margin="0 6 6 0"/>
+        <Button Background="Green" Command="{Binding NewGameCommand}" Content="Новая игра" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="15" Margin="0 6 6 0"/>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="3">
             <Label Content="Введите число:" FontSize="35" HorizontalAlignment="Center"/>
             <TextBox Width="300" FontSize="35" TextAlignment="Center" BorderThickness="3"/>
