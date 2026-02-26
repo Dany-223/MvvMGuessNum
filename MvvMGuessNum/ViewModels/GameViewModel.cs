@@ -11,7 +11,7 @@ namespace MvvMGuessNum.ViewModels
     {
         public GameViewModel()
         {
-            GuessCommand = new RelayCommand(GuessNum, CanGuess);
+            GuessCommand = new RelayCommand(GuessNum);
             NewGameCommand = new RelayCommand(NewGame);
         }
 
@@ -107,10 +107,6 @@ namespace MvvMGuessNum.ViewModels
             return RandomNum;
         }
 
-        private bool CanGuess(object parametr)
-        {
-            return !string.IsNullOrEmpty(parametr.ToString());
-        }
         
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName = null)
