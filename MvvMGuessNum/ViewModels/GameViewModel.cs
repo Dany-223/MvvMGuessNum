@@ -11,7 +11,7 @@ namespace MvvMGuessNum.ViewModels
     {
         public GameViewModel()
         {
-            GuessCommand = new RelayCommand(GuessNum);
+            GuessCommand = new RelayCommand(GuessNum, CanGuess);
             NewGameCommand = new RelayCommand(NewGame);
         }
 
@@ -66,7 +66,7 @@ namespace MvvMGuessNum.ViewModels
                 field = value;
                 OnPropertyChanged(nameof(Popitka));
             }
-        } = 5;
+        } = 10;
 
         private void NewGame(object parametr)
         {
