@@ -72,7 +72,7 @@ namespace MvvMGuessNum.ViewModels
         private void NewGame(object parametr)
         {
             IsEnable = true;
-            Popitka = 5;
+            Popitka = 10;
             Message = "";
             GenerateNum();
         }
